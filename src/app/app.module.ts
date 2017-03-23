@@ -11,11 +11,11 @@ import { CvComponentComponent } from './cv-component/cv-component.component';
   declarations: [
     AppComponent,
     LoginComponentComponent,
-    CvComponentComponent
+    CvComponentComponent,
+    FormBuilder
   ],
   imports: [
     BrowserModule,
-    FormBuilder,
     ReactiveFormsModule,
     FormsModule,
     HttpModule

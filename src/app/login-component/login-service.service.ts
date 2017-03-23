@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Rx } from 'rxjs';
+import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class LoginServiceService {
@@ -8,8 +8,8 @@ export class LoginServiceService {
 	
   constructor(private http: Http) { }
 
-  login(data): Observable<data>{
-  	this.http.post("/login", data);
+  login(data){
+  	return this.http.post("/login", data);
   }
 
 }

@@ -1,5 +1,6 @@
 <div class="container">
 	<div class="row">
+		<div *ngIf="errorMessage" class="alert alert-danger">Invalid username or password!</div>
 		<form name="form">
 			<div class="col-xs-6 col-md-12">
 				<div class="form-group">
