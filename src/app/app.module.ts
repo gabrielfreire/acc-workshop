@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -11,8 +11,7 @@ import { CvComponentComponent } from './cv-component/cv-component.component';
   declarations: [
     AppComponent,
     LoginComponentComponent,
-    CvComponentComponent,
-    FormBuilder
+    CvComponentComponent
   ],
   imports: [
     BrowserModule,
