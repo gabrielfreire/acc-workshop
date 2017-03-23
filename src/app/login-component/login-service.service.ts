@@ -9,7 +9,7 @@ export class LoginServiceService {
   constructor(private http: Http) { }
 
   login(data){
-  	return this.http.post("/login", data);
+  	return this.http.post("8cf09171.ngrok.io/login", data);
   }
 
 }

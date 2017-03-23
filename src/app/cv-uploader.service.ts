@@ -7,7 +7,7 @@ export class CvUploaderService {
 
   constructor(private http: Http) { }
 
-  cvUpload(data): Observable<Response>{
+  cvUpload(data): Observable<any>{
     const cvUploaderUrl = "/CV";
   	return this.http.post(cvUploaderUrl, data);
   }
