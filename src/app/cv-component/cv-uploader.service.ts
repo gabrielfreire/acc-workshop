@@ -8,7 +8,7 @@ export class CvUploaderService {
   constructor(private http: Http) { }
 
   cvUpload(data): Observable<any>{
-    const cvUploaderUrl = "/CV";
+    const cvUploaderUrl = "8cf09171.ngrok.io/CV";
   	return this.http.post(cvUploaderUrl, data);
   }
 }
