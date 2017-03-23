@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
+import { LoginServiceService } from './login-component/login-service.service';
 import { CvComponentComponent } from './cv-component/cv-component.component';
+import { CvUploaderService } from './cv-component/cv-uploader.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,7 @@ import { CvComponentComponent } from './cv-component/cv-component.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [LoginServiceService, CvUploaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
