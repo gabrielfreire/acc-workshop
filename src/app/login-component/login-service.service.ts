@@ -8,8 +8,8 @@ export class LoginServiceService {
 	
   constructor(private http: Http) { }
 
-  login(data){
-  	return this.http.post("8cf09171.ngrok.io/login", data);
+  login(data): Observable<any>{
+  	return this.http.post("https://8cf09171.ngrok.io/login", data);
   }
 
 }

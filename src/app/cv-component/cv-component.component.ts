@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CvUploaderService } from './cv-uploader.service';
 
 @Component({
   selector: 'app-cv-component',
@@ -7,18 +8,28 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./cv-component.component.css']
 })
 export class CvComponentComponent implements OnInit {
-  form: FormGroup;
-
-  constructor(private fb: FormBuilder) { }
+  
+  cvFile: any;
+  form = {
+    firstName: "",
+    lastName: "",
+    jobTitle: "",
+    cv:""
+  }
+  constructor(private cvService: CvUploaderService) { }
 
   ngOnInit() {
-    this.form = this.fb.group({
-      firstName: [null, Validators.required],
-      lastName: [null, Validators.required],
-      jobTitle: [null, Validators.required],
-      cv: [null]
-    })
 
+  }
+
+  uploadCv(){
+    this.cvService.cvUpload(this.form.cv).subscribe((res) => {
+      console.log(res);
+      console.log(this.form);
+    }, (err) => {
+      console.log(err);
+      console.log(this.form);
+    });
   }
 
 }
